@@ -1,0 +1,23 @@
+﻿@model WebApplication1.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+
+    @Html.LabelFor(model => model.UserName)
+    @Html.DisplayFor(model => model.UserName)
+    @Html.LabelFor(model => model.Password)
+    @Html.DisplayFor(model => model.Password)
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
